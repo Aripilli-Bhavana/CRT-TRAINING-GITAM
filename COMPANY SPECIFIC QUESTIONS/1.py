@@ -3,28 +3,31 @@
  note: while checking the balance consider the middle character exclusively.
  input : 5
  output : 3
- '''
-def is_balanced(s):
-    n = len(s)
-    if n % 2 == 0:
-        return False
-    mid = n // 2
-    left = s[:mid]
-    right = s[mid + 1:]
-    
-    left_count = {}
-    right_count = {}
-    
-    for char in left:
-        left_count[char] = left_count.get(char, 0) + 1
-    
-    for char in right:
-        right_count[char] = right_count.get(char, 0) + 1
-    
-    return left_count == right_count
-def count_balanced_strings(arr):
-    count = 0
-    for s in arr:
-        if is_balanced(s):
-            count += 1
-    return count
+'''
+
+def balanced(l): #aabaaba
+    c=0
+    for p in l:
+        if(len(p)%2==0):
+            f=0
+
+        else:
+            m=len(l)//2 #7//2=3
+            mi=p[m]#a
+            fh=p[:m]#aab
+            sh=p[m+1:]#aba
+            f1=fh.count(mi)#2
+            s1.sh.count(mi)#2
+            if(f1!=s1):
+                f=0
+        if(f==1):
+            c=c+1
+    return c
+
+n=int(input())
+l=[]
+for p in range(n):
+    s=input()
+    l.append(s)
+c=balanced(l)
+print(c)
