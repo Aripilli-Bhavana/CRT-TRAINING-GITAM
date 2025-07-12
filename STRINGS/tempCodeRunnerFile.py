@@ -1,3 +1,4 @@
+# most repeated vowel in a string
 s=input()
 v="aeiouAEIOU"
 d={}

@@ -2,7 +2,7 @@ def qs(l):
     if(len(l) <= 1):
         return l
     else:
-        pivot.pop()
+        pi.pop()
         left =[]
         right =[]
         for p in l:
