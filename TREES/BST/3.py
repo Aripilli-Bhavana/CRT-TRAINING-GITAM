@@ -10,7 +10,35 @@ def current(root, l): #(root,1)
     else:
         current(root.left, l-1) #current(50, 2) #current(25,1) #current(125,1)
         current(root.right, l-1) #current(150, 2) #current(75,1) #current(180,1)
-n1= Nodee(27)
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+    def insert(self, data):
+        if self.data:
+            if data<self.data:
+                if self.left is None:
+                    self.left = Node(data)
+                else:
+                    self.left.insert(data)
+        else:
+            if self.right is None:
+                self.right = Node(data)
+            else:
+                self.right.insert(data)
+def inorder(root):
+    if(root):
+        inorder(root.left)
+        print(root.data, end=' ')
+        inorder(root.right)
+
+def height(root):
+    if root is None:
+        return 0
+    return 1 + max(height(root.left), height(root.right))   
+n1= Node(27)
 n1.insert(14)
 n1.insert(35)   
 n1.insert(10)

@@ -21,7 +21,7 @@ def inorder(root):
         print(root.data, end=' ')
         inorder(root.right)
 
-n1= Node(27)
+n1= Nodee(27)
 n1.insert(14)
 n1.insert(35)   
 n1.insert(10)
