@@ -22,3 +22,4 @@ def delete_bst(root, key):
         root.right = delete_bst(root.right, temp.data)
     return root
 
+
