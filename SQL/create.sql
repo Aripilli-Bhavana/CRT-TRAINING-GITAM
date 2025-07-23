@@ -1,4 +1,4 @@
-
+.PRIMARY
 -- create
 CREATE TABLE EMPLOYEE (
   empId int,
